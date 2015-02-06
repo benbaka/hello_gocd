@@ -1,0 +1,17 @@
+---
+- hosts: servers
+  tasks:
+      - name: Creates directory 
+        file: path=/home/vagrant/experiments state=directory 
+
+      - name: Configure list of talkatives
+        include: settings.yml
+                 name=ben
+                 teacher=aduhene
+
+      - name: Issue the talkative command
+        command: bash experiments/names_of_talkative.sh 
+                 chdir=/home/vagrant/
+
+      
+

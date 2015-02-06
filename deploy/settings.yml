@@ -1,0 +1,4 @@
+---
+
+- name: Configure names of talkatives
+  template: dest=/home/vagrant/experiments/names_of_talkative.sh src=files/names_of_talkative.sh
